@@ -1,24 +1,3 @@
-/*package controleur;
-
-import villagegaulois.Village;
-
-public class ControlAcheterProduit {
-	private Village village;
-	private ControlTrouverEtalVendeur controlTrouverEtalVendeur;
-	private ControlVerifierIdentite controlVerifierIdentite;
-
-	public ControlAcheterProduit(ControlVerifierIdentite controlVerifierIdentite,
-			ControlTrouverEtalVendeur controlTrouverEtalVendeur,
-			Village village) {
-		this.village = village;
-		this.controlVerifierIdentite = controlVerifierIdentite;
-		this.controlTrouverEtalVendeur = controlTrouverEtalVendeur;
-	}
-
-	//TODO a completer
-}*/
-
-
 package controleur;
 
 import frontiere.Clavier;
@@ -62,6 +41,17 @@ public class ControlAcheterProduit {
 		Etal etal = controlTrouverEtalVendeur.trouverEtalVendeur(nomVendeur);
 		int quantiteAchete=etal.acheterProduit(nbproduit);
 		return quantiteAchete;
+		
+	}
+	
+	public boolean verifProduit(String produit) {
+		boolean produitExiste = false;
+		Gaulois[] tabVendeur = village.rechercherVendeursProduit(produit);
+		if (tabVendeur!=null) {
+			produitExiste = true; 
+		}		
+		
+		return produitExiste;
 		
 	}
 }

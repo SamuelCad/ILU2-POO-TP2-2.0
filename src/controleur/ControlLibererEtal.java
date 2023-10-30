@@ -4,15 +4,14 @@ import villagegaulois.*;
 public class ControlLibererEtal {
 	private ControlTrouverEtalVendeur controlTrouverEtalVendeur;
 
-	public ControlLibererEtal(
-			ControlTrouverEtalVendeur controlTrouverEtalVendeur) {
+	public ControlLibererEtal (ControlTrouverEtalVendeur controlTrouverEtalVendeur) {
 		this.controlTrouverEtalVendeur = controlTrouverEtalVendeur;
 	}
 
 	public boolean isVendeur (String nomVendeur) {
 		boolean vendeurReconnu = false;
-		Etal etal = controlTrouverEtalVendeur.trouverEtalVendeur(nomVendeur);
-		if (etal != null) {
+		/**/Etal etal = controlTrouverEtalVendeur.trouverEtalVendeur(nomVendeur);
+		if (etal != null && etal.isEtalOccupe()) {
 			vendeurReconnu = true;
 		}
 		return vendeurReconnu;

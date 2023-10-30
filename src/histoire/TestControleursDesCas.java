@@ -31,7 +31,7 @@ public class TestControleursDesCas {
 
 		System.out.println("Cas 2 : Emmenager");
 		ControlEmmenager controlEmmenager = new ControlEmmenager(village);
-		controlEmmenager.ajouterDuide("Panoramix", 10, 5, 7);
+		controlEmmenager.ajouterDruide("Panoramix", 10, 5, 7);
 		controlEmmenager.ajouterGaulois("Asterix", 6);
 		controlEmmenager.ajouterGaulois("Obelix", 12);
 		String[] nomsVillageois = controlAfficherVillage.donnerNomsVillageois();
